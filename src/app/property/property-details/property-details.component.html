@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1><a  [routerLink]="['/property/list']" ><i class="glyphicon glyphicon-chevron-left" ></i></a> Details about property : #{{property.id}}</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel panel-primary">
+			 <div class="panel-heading">#{{property.id}}</div>
+			  <div class="panel-body">
+			    Id : #{{property.id}}<br>
+			    Description : {{property.description}}<br>
+			    Type: {{property.type}}<br>
+			    Size : {{property.size}} m²<br>
+			    Latitude : {{property.latitude}}<br>
+			    Longitude : {{property.longitude}}<br>
+			    Price : {{property.price}}$ USD<br>
+			    Available : <i *ngIf="property.available" class="glyphicon glyphicon-ok"></i><i  class="glyphicon glyphicon-remove" *ngIf="!property.available"></i><br>
+			    Contact Owner : <br>
+			    <ul>
+			    	<li>Full Name : {{property.owner.firstName}} {{property.owner.lastName}}</li>
+			    	<li>Phone : {{property.owner.phone}}</li>
+			    	<li>Email : {{property.owner.email}}</li>	
+			    </ul>
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>

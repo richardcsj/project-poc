@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1><a  [routerLink]="['/property/search']" ><i class="glyphicon glyphicon-chevron-left" ></i></a>Your search results : </h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<table class="table table-bordered">
+				<tr class="info">
+					<th>id</th>
+					<th>description</th>
+					<th>type</th>
+					<th>details</th>
+				</tr>
+				<tr *ngFor="let property of properties">
+					<td>{{property.id}}</td>
+					<td>{{property.description}}</td>
+					<td>{{property.type}}</td>
+					<td><a [routerLink]="['/property',property.id]" class="btn btn-info" >see more</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
